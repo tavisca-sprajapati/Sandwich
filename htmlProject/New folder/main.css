@@ -1,0 +1,124 @@
+.button-col {
+  background-color:green; 
+}
+
+
+#header-wrapper{
+	width:100%;
+	overflow:hidden;
+	position:relative;
+	height:62px;
+	background:url(images/bg-header.gif) repeat-x;
+}
+
+
+.w1{
+	width:1007px;
+	position:relative;
+	float:left;
+	left:50%;
+}
+.w2{
+	width:1003px;
+	position:relative;
+	float:left;
+	left:-50%;
+}
+#header{
+	width:1007px;
+	position:relative;
+	padding:10px 0 0 20px;
+}
+.heading{
+	float:left;
+	width:300px;
+	margin:0 20px 0 0;
+	padding:3px 0 0;
+}
+.text-hello-friend{
+	background:url(images/text-hello-friend.png) no-repeat;
+	width:298px;
+	height:16px;
+	display:block;
+	margin:0 0 4px;
+	overflow:hidden;
+	text-indent:-9999px;
+}
+.text-sign-up{
+	background:url(images/text-sign-up.png) no-repeat;
+	width:233px;
+	height:13px;
+	display:block;
+	overflow:hidden;
+	text-indent:-9999px;
+}
+.form-email{
+	float:left;
+	width:470px;
+}
+.form-email .emailInput {
+	width: 175px;
+}
+.form-email .zipInput {
+	width: 100px;
+}
+
+.form-email .btn-sign-up{
+	background:url(images/btn-sign-up.png) no-repeat;
+	width:134px;
+	height:38px;
+	padding:0;
+	cursor:pointer;
+	border:0;
+	margin:0;
+}
+
+#header .link{
+	float:left;
+	line-height:17px;
+	font-size:10px;
+	color:#3cb3c4;
+}
+#header .close{
+	float:right;
+	color:#57466b;
+	line-height:30px;
+	padding-right:32px;
+}
+
+
+
+
+
+
+
+.logo{
+	float:left;
+	width:539px;
+	height:134px;
+	margin:0 0 27px 2px;
+	text-indent:-9999px;
+	overflow:hidden;
+}
+.logo-us {
+	background:url(images/logo.png) no-repeat;
+}
+
+.body-wrapper
+{
+background:url(images/bg-wrapper.gif);	
+width:100%;
+height:100%;
+}
+.text-logo
+{
+background:url(images/logo.png);
+}
+
+#master-wrapper{
+	background:url(images/master.png) repeat-y;
+	width:100%;
+	height:100%;
+	
+}
+
