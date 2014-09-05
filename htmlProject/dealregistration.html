@@ -1,4 +1,4 @@
-﻿
+
 
 <!DOCTYPE html>
 <html>
@@ -14,6 +14,60 @@
 	<link href="main.css" rel="stylesheet">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 
+
+<script type="text/javascript">
+
+//var ck_title = document.dealregistrationForm.title.value ;
+//var ck_description=document.dealregistrationForm.description.value;
+var ck_contactname=/^[A-Za-z_ ]{3,20}$/;
+var ck_mail=/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+var ck_phone=/^[0-9]{10}\b$/;
+
+
+function dealregistrationValidation()
+{
+  var ck_category=document.getElementById("dropdown");
+    var selected_value=ck_category.options[ck_category.selectedIndex].value;
+    var contact_name=dealregistrationForm.contactname.value;
+    var mail_id=dealregistrationForm.email.value;
+    var phone_no=dealregistrationForm.phone.value;
+    var ck_title = document.dealregistrationForm.title.value ;
+    var ck_description=document.dealregistrationForm.description.value;
+
+
+    if(selected_value==0)
+    {
+      alert("please select a Category!!!");
+      return false;
+    }
+    if(ck_title==""||ck_title==null)
+    {
+      alert("Please enter some title!!!");
+      return false;
+    }
+    if(ck_description==""||ck_description==null)
+    {
+      alert("Please provide some description!!!");
+      return false;
+    }
+    if (!contact_name.match(ck_contactname)) 
+    {
+      alert("Please enter a valid contact Name!!!");
+      return false;
+    }
+    if(!ck_mail.test(mail_id))
+    {
+      alert("Please enter a valid email id!!!");
+      return false;
+    }
+    if(!ck_phone.test(phone_no))
+    {
+      alert("Please enter a valid phone_no");
+      return false;
+    }
+}
+
+</script>
      
    </head>
    <body>
@@ -90,27 +144,29 @@
           </div>
           <br/>
             
+           
+
+            <form name="dealregistrationForm" action="congratulations.html" onSubmit="return dealregistrationValidation(this)" method="post">          
+                    
+           
+
 
             <div class="cust_detail" >
-                        
-                    
+              
                 <div class="row">
                   <div style="width:40%;float:left;">
                     <div>
                     <div class="col-md-12 col-sm-6 col-xs-12">
-                      <div class="firstname">Select Category</div>
-                      <div class="dropdown">
-                               <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ---Category---
-                               <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Food</a></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Electronics</a></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Travel</a></li>
-    
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Fitness</a></li>
-                                 </ul>
+                      <div class="firstname">Category</div>
+                      <div>
+                      <select id="dropdown">
+                          <option value="0">---Category---</option>
+                          <option value="1">Food</option>
+                          <option value="2">Electronics</option>
+                          <option value="3">Travel</option>
+                          <option value="4">Fitness</option>
+                        </select> 
+                             
                             </div>
 
                     </div>
@@ -119,14 +175,14 @@
                     <div>
                       <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="firstname">Add Title</div>
-                      <div><input type="text" style="width:100%;"> </div>
+                      <div><input type="text" style="width:100%;" name="title"> </div>
                       </div>
                       
                     </div>
                     <div>
                       <div class="col-md-12 col-sm-12 col-xs-12">
                          <div class="firstname">Description</div>
-                      <div><textarea  style="width:100%;"></textarea></div>
+                      <div><textarea  style="width:100%;" name="description"></textarea></div>
                       </div>
                       </div>
                      <div>
@@ -145,21 +201,21 @@
                   <div>
                     <div class="col-md-12 col-sm-12 col-xs-12">
                       <div class="firstname">Contact Name:</div>
-                      <div><input type="text"  style="width:100%;"> </div>
+                      <div><input type="text"  style="width:100%;" name="contactname"> </div>
                     </div>
                   </div>
 
                   <div>
                     <div class="col-md-12 col-sm-12 col-xs-12">
                       <div class="firstname">Email:</div>
-                      <div><input type="text"  style="width:100%;"> </div>
+                      <div><input type="text"  style="width:100%;" name="email"> </div>
                     </div>
                   </div>
 
                   <div>
                     <div class="col-md-12 col-sm-12 col-xs-12">
                       <div class="firstname">Phone:</div>
-                      <div><input type="text"  style="width:100%;"></div>
+                      <div><input type="text"  style="width:100%;" name="phone"></div>
                     </div>
                   </div>
 
@@ -194,7 +250,7 @@
                     <input type="submit" style=""/>
                   </div>
 
-
+                </form>
 
 </div>
 
