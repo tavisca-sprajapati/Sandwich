@@ -1,4 +1,4 @@
-  <script type="text/javascript">
+  //<script type="text/javascript">
   var ck_firstname = /^[A-Za-z]{3,20}$/;
   var ck_lastname = /^[A-Za-z]{3,20}$/;
   var ck_mail=/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
@@ -33,7 +33,7 @@
     }
     if(!ck_mail.test(mail_id))
     {
-      alert("Please enter a vlaid email id!!!");
+      alert("Please enter a valid email id!!!");
       return false;
     }
     if(!ck_confirmmail.test(confirm_mail)||confirm_mail!=mail_id)
@@ -65,4 +65,4 @@
   }
   
   
-   </script>
+  // </script>
