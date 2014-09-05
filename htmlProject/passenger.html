@@ -7,10 +7,79 @@
       <!-- Bootstrap -->
       <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
       <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-      <link href="bootstrap/css/bootstrap-theme.css" rel="styleshee">
+      <link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet">
       <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="main.css" rel="stylesheet">
      <link rel="icon" href="favicon.ico" type="image/x-icon">
+	 
+	<script type="text/javascript">
+	var ck_firstname = /^[A-Za-z]{3,20}$/;
+  var ck_lastname = /^[A-Za-z]{3,20}$/;
+	var ck_mail=/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+  var ck_confirmmail=/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+  var ck_zip=/^[0-9]{6}$/;
+  var ck_password = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}/;
+  var ck_confirmpassword = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}/;
+
+
+		function validateForm()
+	{
+    var selectMi=document.getElementById("dropdown");
+    var selected_value=selectMi.options[selectMi.selectedIndex].value;
+		var first_name=PassengerDetailsForm.firstname.value;
+    var last_name=PassengerDetailsForm.lastname.value;
+    var mail_id=PassengerDetailsForm.email.value;
+    var confirm_mail=PassengerDetailsForm.confirmemail.value;
+    var zip=PassengerDetailsForm.zipcode.value;
+    var password=PassengerDetailsForm.password.value;
+    var confirm_password=PassengerDetailsForm.confirmpassword.value;
+
+
+		if (!ck_firstname.test(first_name)) 
+		{
+			alert("Please enter a valid First Name!!!");
+      return false;
+		}
+    if (!ck_lastname.test(last_name)) 
+    {
+      alert("Please enter a valid Last name!!!");
+      return false;
+    }
+    if(!ck_mail.test(mail_id))
+    {
+      alert("Please enter a vlaid email id!!!");
+      return false;
+    }
+    if(!ck_confirmmail.test(confirm_mail)||confirm_mail!=mail_id)
+    {
+      alert("Email_id doesn't match!!!");
+      return false;
+    }
+    if(!ck_zip.test(zip))
+    {
+      alert("Enter a correct zip code!");
+      return false;
+    }
+    if (!ck_password.test(password)) 
+    {
+      alert("You must enter a valid Password ");
+      return false;
+    }
+    if (!ck_password.test(password)||confirm_password!=password) 
+    {
+      alert("Password doesn't match");
+      return false;
+    }
+    if(selected_value==0)
+    {
+      alert("please select a user!!!");
+      return false;
+    }
+   
+	}
+	
+	
+   </script>
    </head>
    <body>
 
@@ -86,7 +155,8 @@
           </div>
           <br/>
             
-          <form action="confirmation.html">
+          
+		  <form name="PassengerDetailsForm" action="confirmation.html" onSubmit="return validateForm(this)" onBlur="return validateForm(this)" method="post">
             <div class="cust_detail" >
                         
                     
@@ -95,32 +165,41 @@
                     <div>
                     <div class="col-md-4 col-sm-6 col-xs-12">
                       <div class="firstname">*First Name</div>
-                      <div><input type="text"> </div>
+                      <div><input type="text" name="firstname"> </div>
                     </div>
                     <div class="col-md-4 col-sm-6 col-xs-12">
                       <div class="firstname">*Last Name</div>
-                      <div><input type="text"> </div>
+                      <div><input type="text" name="lastname"> </div>
                     </div>
+                    
+
                     <div class="col-md-4 col-sm-6 col-xs-12">
                       <div class="firstname">*M.I.</div>
-
-                      <div><input type="text" style="width:50%;"> </div>
+                      <div>
+                      <select id="dropdown">
+                          <option value="0">Select</option>
+                          <option value="1">Mr.</option>
+                          <option value="2">Mrs.</option>
+                          <option value="3">Miss</option>
+                        </select> 
+                      </div>
                     </div>
-                    </div>
+                    
+                    
                     <div>
                       <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="firstname">*Email Address</div>
-                      <center><div><input type="text" style="width:100%"> </div></center>
+                      <center><div><input type="text" name="email" style="width:100%"> </div></center>
                       </div>
                       <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="firstname">*Confirm Email Address</div>
-                      <center><div><input type="text" style="width:100%"> </div></center>
+                      <center><div><input type="text" name="confirmemail" style="width:100%"> </div></center>
                       </div>
                     </div>
                     <div>
                       <div class="col-md-12 col-sm-12 col-xs-12">
                          <div class="firstname">*Zip Code</div>
-                      <div><input type="text"> </div>
+                      <div><input type="text" name="zipcode"> </div>
                       </div>
                       </div>
                      <div>
@@ -131,18 +210,18 @@
                       <div>
                     <div class="col-md-4 col-sm-6 col-xs-12">
                       <div class="firstname">*Password</div>
-                      <div><input type="text"> </div>
+                      <div><input type="password" name="password"> </div>
                     </div>
                   </div>
                   <div>
                     <div class="col-md-12 col-sm-12 col-xs-12">
                       <div class="firstname">*Confirm Password</div>
-                      <div><input type="text"> </div>
+                      <div><input type="password" name="confirmpassword"> </div>
                     </div>
                   </div>
                     <div>
                     <div class="col-md-12 col-sm-12 col-xs-12">
-                      <div class="firstname"><input type="checkbox">Remember me?</div>
+                      <div class="firstname"><input type="checkbox" name="checkbox">Remember me?</div>
                     </div>
                   </div>
                     
@@ -169,7 +248,7 @@
                       <div class="firstname"><a href="#" target="_blank" class="col">Back to Login</a> </div>
                     
                   <div >
-                  <input type="submit" />
+                  <input type="submit"/>
                   </div>
                   </div>
 
