@@ -1,0 +1,25 @@
+#panel,#flip,#flipUp
+{
+padding:5px;
+text-align:center;
+position:fixed;
+  top: 60px;
+ right: 60px;
+
+
+border:solid px #c3c3c3;
+}
+#panel
+{
+z-index:1;
+position:fixed;
+width:300px;
+height:500px;
+top:100px;
+right: 10px;
+padding:0px;
+display:none;
+box-shadow: 10px 10px 5px #888888;
+}
+
+
