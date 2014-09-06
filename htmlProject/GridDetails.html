@@ -79,7 +79,9 @@ Project</title>
 
                 <!--start of body and footer-->
 
-                    <div class="body-div">
+                    <div class="body-div" id="mainDiv">
+                      <script id="detailsSection" type="text/x-handlebars-template">
+                      {{#each loopMe}}
          <div class="container">
           
             </div>   
@@ -88,13 +90,13 @@ Project</title>
 
         <!--class="col-md-16"-->
                    <div  class="col-md-8 col-sm-12 col-xs-12">
-                        <div class="detail_font">$10 for $20 to Spend aat LeBlanc's True Value Hardware in Manchester</div>
+                        <div class="detail_font">{{title}}</div>
           <ul class="links">
-        <li>Manchester, NH</li>
-        <li><a href="http://ww3.truevalue.com/leblancs" target="_blank">ww3.truevalue.com/leblancs</a></li>
+        <li>{{place}}</li>
+        <li><a href="http://ww3.truevalue.com/leblancs" target="_blank">{{link}}</a></li>
         <li><a href="#more-details" class="link-more" tabindex="18">MORE DETAILS</a></li>
       </ul>
-                       <img src="images/detail.jpg" width=100% height=100% />
+                       <img src="{{imgPath}}" width=100% height=100% />
 
 
                             <div class="hidden-lg">
@@ -103,7 +105,7 @@ Project</title>
                             <div class="buy-box-price-div">
                               <span class="buy-box-price1">
                               <span class="buy-box1-font-doller">$</span>
-                              <span class="buy-box1-font10">10</span>
+                              <span class="buy-box1-font10">{{price}}</span>
                               </span>
                             </div>
                                 <div style="float:right;">
@@ -121,9 +123,9 @@ Project</title>
                                       <td align="center">You Save</td>
                                       </tr>
                                       <tr>
-                                      <td width=33% align="center">$<font size="5">20</font></td>
-                                      <td width=33% align="center"><font size="5">50</font>%</td>
-                                      <td width=33% align="center">$<font size="5">10</font></td>
+                                      <td width=33% align="center">$<font size="5">{{value}}</font></td>
+                                      <td width=33% align="center"><font size="5">{{discount}}</font>%</td>
+                                      <td width=33% align="center">$<font size="5">{{yousave}}</font></td>
                                       </tr>
                                   </table>
                               </div>
@@ -137,16 +139,16 @@ Project</title>
                         <font size=5>A Quick Look</font></div>
                         <ul class="quick-look-fonts" style="position:relative;top:20px;">
                           <li>
-                            Family-owned and operated farm since 1906
+                            {{ql1}}
                           </li>
                           <li>
-                            Voucher is good for 4 admissions to corn maze plus 4 cups of grain for the petting farm
+                            {{ql2}}
                           </li>
                           <li>
-                            Also offering a retail farm stand, flowers, NH-made products, ice cream and much more!
+                            {{ql3}}
                           </li>
                           <li>
-                            Farm is open 7 days/week
+                            {{ql4}}
                           </li>
                         </ul>
                         </br>
@@ -157,13 +159,13 @@ Project</title>
                         <font size=5>You Shoud Know</font></div>
                         
                         <ul class="quick-look-fonts" style="position:relative;top:15px;">
-                          <li>Valid from 8/15 until maze closes (10/31/14)*</li>
-                          <li>Can buy 5 per person and gift 5</li>
-                          <li>Can use 2 vouchers per day</li>
-                          <li>Not valid on any store or farm products</li>
-                          <li>Must be used in a single visit</li>
-                          <li>Not valid with any other offer or discount</li>
-                          <li>No change or credit returned.</li>
+                          <li>{{yl1}}</li>
+                          <li>{{yl2}}</li>
+                          <li>{{yl3}}</li>
+                          <li>{{yl4}}</li>
+                          <li>{{yl5}}</li>
+                          <li>{{yl6}}</li>
+                          <li>{{yl7}}</li>
                         </ul>
                         </div>
                       
@@ -173,7 +175,7 @@ Project</title>
 
 
 
-      <!--class="col-sm-3 col-md-4 col-xs-2"-->
+      
        <div class="col-md-4 hidden-sm hidden-xs">
             <div class="buy-box mythumbnail-buy-box">
              <!-- <img src="images/bg-buy-box.png" width=100% height:100%>-->
@@ -266,153 +268,6 @@ Project</title>
               <!--start of left column-->
 
 
-                                <div id="lab" class="hotPanel">
-                  <div id="showMe" class="showme-css"><font size="3" color=white>More Details</font></div>
-                  <div id="ShowLess" class="showLess-css"></div>
-
-
-                  <div id="mainpage" style="overflow-y:auto;width:0px;height:0px;">
-
-                      <!--start of panel thumbnails-->
-
-                      <div class="col-sm-12 col-md-12 col-xs-12">
-       <a href="#" class="thumbnail"  style="text-decoration: none">
-               <span class="headline">
-               $10 for $20 Worth of Food at DRAE - A Tapas Experience - in Derry
-               </span>
-      <img src="images/ImageHandler.jpg" alt="images/Desert.jpg">
-      
-      <table cellpadding="0" cellspacing="0" border="0" width=100%>
-            <tr>
-               <td class="locale">Derry, NH</td>
-           <td class="full-price">$20</td>
-                        <td class="discount-price">$10</td>
-               </tr>
-      </table>
-      </a>
-      </div>
-
-
-
-      <div class="col-sm-12 col-md-12 col-xs-12">
-       <a href="#" class="thumbnail"  style="text-decoration: none">
-               <span class="headline">
-               $10 for $20 Worth of Food at DRAE - A Tapas Experience - in Derry
-               </span>
-      <img src="images/ImageHandler (2).jpg" alt="images/Desert.jpg">
-      
-      <table cellpadding="0" cellspacing="0" border="0" width=100%>
-            <tr>
-               <td class="locale">Derry, NH</td>
-           <td class="full-price">$20</td>
-                        <td class="discount-price">$10</td>
-               </tr>
-      </table>
-
-      </a>
-      </div>
-
-
-<div class="col-sm-12 col-md-12 col-xs-12">
-       <a href="#" class="thumbnail"  style="text-decoration: none">
-               <span class="headline">
-               $10 for $20 Worth of Food at DRAE - A Tapas Experience - in Derry
-               </span>
-      <img src="images/ImageHandler (1).jpg" alt="images/Desert.jpg">
-      
-      <table cellpadding="0" cellspacing="0" border="0" width=100%>
-            <tr>
-               <td class="locale">Derry, NH</td>
-           <td class="full-price">$20</td>
-                        <td class="discount-price">$10</td>
-               </tr>
-      </table>
-
-      </a>
-      </div>
-
-
-            <div class="col-sm-12 col-md-12 col-xs-12">
-       <a href="#" class="thumbnail"  style="text-decoration: none">
-               <span class="headline">
-               Auto Inspection or Air Conditioning Service (Up to 56% Off)
-               </span>
-      <img src="images/ImageHandler (3).jpg" alt="images/Desert.jpg">
-      
-      <table cellpadding="0" cellspacing="0" border="0" width=100%>
-            <tr>
-               <td class="locale">Derry, NH</td>
-           <td class="full-price">$20</td>
-                        <td class="discount-price">$10</td>
-               </tr>
-      </table>
-      </a>
-      </div>
-
-
-      <div class="col-sm-12 col-md-12 col-xs-12">
-       <a href="#" class="thumbnail"  style="text-decoration: none">
-               <span class="headline">
-               Lunch/Dinner at Gauchos Brazilian Steak House (Up to 53% Off)
-               </span>
-      <img src="images/ImageHandler (4).jpg" alt="images/Desert.jpg">
-      
-      <table cellpadding="0" cellspacing="0" border="0" width=100%>
-            <tr>
-               <td class="locale">Derry, NH</td>
-           <td class="full-price">$20</td>
-                        <td class="discount-price">$10</td>
-               </tr>
-      </table>
-
-      </a>
-      </div>
-
-
-<div class="col-sm-12 col-md-12 col-xs-12">
-       <a href="#" class="thumbnail"  style="text-decoration: none">
-               <span class="headline">
-               $12 for a Full Day Boat Rental for One at Edgewater Canoe and Kayak
-               </span>
-      <img src="images/ImageHandler (5).jpg" alt="images/Desert.jpg">
-      
-      <table cellpadding="0" cellspacing="0" border="0" width=100%>
-            <tr>
-               <td class="locale">Derry, NH</td>
-           <td class="full-price">$20</td>
-                        <td class="discount-price">$10</td>
-               </tr>
-      </table>
-
-      </a>
-      </div>
-
-
-
-            <div class="col-sm-12 col-md-12 col-xs-12">
-       <a href="#" class="thumbnail"  style="text-decoration: none">
-               <span class="headline">
-               2-Hour Lazer Tag Party by Village Idiotz Party Rentals ($100 Savings)
-               </span>
-      <img src="images/ImageHandler (6).jpg" alt="images/Desert.jpg">
-      
-      <table cellpadding="0" cellspacing="0" border="0" width=100%>
-            <tr>
-               <td class="locale">Derry, NH</td>
-           <td class="full-price">$20</td>
-                        <td class="discount-price">$10</td>
-               </tr>
-      </table>
-      </a>
-      </div>
-
-
-                      <!--end of panel thumbnails-->
-
-                    </div>
-
-
-                </div>
 
         
         </div>
@@ -429,32 +284,75 @@ Project</title>
 
         <font size=5>Details</font>
                         <div  class="common-font-detail">
-                        <b>A Family Farm Since 1906</b></br></br> 
-<b>Corn Maze is open same hours as the farm stand:</b> Mon - Fri: 10am-6pm & Sat - Sun: 10am-5pm</br></br>
-Twenty-one years ago in Annville, Pennsylvania, Don Frantz created the <a href="#">first corn maze </a>and since then people all over the world have been purposely getting lost every fall. New Hampshire has plenty of puzzling cornfields and, as Halloween approaches, many of them become inhabited with interesting beings. One of the most popular mazes is located at <a href="#">J & F Farms </a>in Derry, a family-friendly destination that also has a petting farm. We've got an a-MAZE-ing deal that gets your family admission to an outdoor experience where they'll get lost, but find fun and make animal friends!</br>
-
-$10 gets you 4 admissions to this year's J & F Farms Corn Maze and 4 cups of grain to feed the animals at the petting farm - a $20 value!</br>
-
-A family-owned farm since 1906, J & F Farms is operated by the Ferdinando family, Vincent and Miriam, and their four sons Francis, Philip, Barry and Bryan. The farm's mission is to provide quality, fresh produce and all natural meats to the community. Open from May until Christmas, their farm stand sells farm fresh eggs, beef, pork, chicken, fruits, and vegetables. Gardeners love their annuals, perennials, herbs, and bagged garden products. J & F Farms also sells wide range of <a href="#">NH Made products</a>, Christmas trees, wreaths, kissing balls, and more.</br>
-
-So after you solve the maze and visit with <a href="#">Mochie the llama </a>and the rest of the animals, stop by the farm stand to say “Hello!” and check out some of the freshest, tastiest food in the Granite State. And don't forget the ice cream!
-
-
-
+                        {{details}}
                         </div>
 
       </div>
+
 
 </div>
 
 
 <!--end of description-->
-     
-
+                     {{/each}}
+</script>
+        
     </div>
 
                
    </div>
+
+
+
+
+
+
+
+
+    <div id="lab" class="hotPanel">
+        <div id="showMe" class="showme-css"><font size="3" color=white>More Details</font></div>
+          <div id="ShowLess" class="showLess-css"></div>
+
+
+                  <div id="mainpage" style="overflow-y:auto;width:0px;height:0px;">
+
+                      <!--start of panel thumbnails-->
+                      <script id="panelThubnails" type="text/x-handlebars-template">
+                      {{#each sidePanel}}
+            <div class="col-sm-12 col-md-12 col-xs-12">
+       <a href="#" class="thumbnail"  style="text-decoration: none">
+               <span class="headline">
+               {{title}}
+               </span>
+      <img src="{{imgpath}}" alt="images/Desert.jpg">
+      
+      <table cellpadding="0" cellspacing="0" border="0" width=100%>
+            <tr>
+               <td class="locale">{{place}}</td>
+           <td class="full-price">${{discount}}</td>
+                        <td class="discount-price">${{price}}</td>
+               </tr>
+      </table>
+      </a>
+      </div>
+      {{/each}}
+</script>
+
+                      <!--end of panel thumbnails-->
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -562,11 +460,13 @@ So after you solve the maze and visit with <a href="#">Mochie the llama </a>and 
 
     </div>
 
-
+    <script src="DetailsHandleBar.js"></script>
+    <script src="DetailsSidePanelHandleBar.js"></script>
       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
       <script src="https://code.jquery.com/jquery.js"></script>
       <!-- Include all compiled plugins (below), or include individual files 
             as needed -->
       <script src="bootstrap/js/bootstrap.min.js"></script>
+
    </body>
 </html>
