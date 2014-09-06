@@ -37,7 +37,39 @@
 }
 
 
+.showLess-css
+{
+	background-color:red;
+	width:100px;
+	height:20px;
+	border-radius:7px;
+	margin:2px 2px 2px 2px;
+}
 
+.showme-css
+{
+	background-color:red;
+	width:100px;
+	height:20px;
+	float:left;
+	border-radius: 7px;
+	margin:2px 2px 2px 2px;
+}
+
+
+.hotPanel
+{
+	background-color:#008080;
+	cursor:pointer;
+	position:fixed;
+	top:100px;
+	right:10px;
+	z-index:1;
+	padding:2px 2px 2px 2px;
+	border-radius: 10px;
+	width:130px;
+	height:30px;
+}
 
 
 
@@ -89,7 +121,7 @@
 
 .contact-footer{
 	list-style-type: none;
-	float:left;
+	float:right;
 	width:226px;
 	text-align:right;
 }
@@ -173,7 +205,6 @@ font:normal 24px Verdana, Arial, sans-serif;
 }
 
 
-/
 .nav-footer{
 	font:11px/16px Verdana, Arial, sans-serif;
 	color:#fff;
@@ -695,7 +726,7 @@ float:left;
 	font-weight:bold;
 	font-size:1.2em;
 	color:#454545;
-	font:11 px verdana,Arial,sans-serif;
+	font:11px verdana,Arial,sans-serif;
 	float:right;
 }
 
@@ -858,7 +889,6 @@ padding: 20px;
 .bottomInputBtn {
 height: 30px;
 float: right;
-align:center;
 font-size: 1.3em;
 min-width: 100px;
 }
