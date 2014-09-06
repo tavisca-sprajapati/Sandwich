@@ -11,6 +11,11 @@
       <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="main.css" rel="stylesheet">
      <link rel="icon" href="favicon.ico" type="image/x-icon">
+	 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+</script>
+
+	 <script src="handlebars-v2.0.0.js"></script>
+
    </head>
    <body>
 
@@ -84,19 +89,20 @@
           <br/><br/
             
           <form>
-            <div class="cust_detail firstname" >
-                        
-                    
-                <div>
-         <h3>Hi Abhijeet,</h3><br/>
-         We are pleased to inform that the following deal with tracking number deal-1010101400 have been confirmed. 
+            <div class="cust_detail firstname" >     
+                <div id="mainc">
+		<script id="sat4" type="text/x-handlebars-template">
+		   {{#each cdata}}
+         <h3>Hi {{name}}</h3><br/>
+         We are pleased to inform that the following deal with tracking number {{tracking_no}} have been confirmed. 
         <br/><b>Thank you for dealing with us!</b><br/><br/>
 
-        <b>Deal NO:</b> &nbsp&nbsp&nbsp  deal_cmf_1400  <br/><br/>
-        <b>Category:</b> &nbsp&nbsp&nbsp Food
+        <b>Deal NO:</b> &nbsp&nbsp&nbsp  {{deal_no}}  <br/><br/>
+        <b>Category:</b> &nbsp&nbsp&nbsp {{category}}
          <br/><br/>
-         <b>Details:</b> &nbsp&nbsp&nbsp <div> <h4>&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp $10 for $20 to Spend at Giovanni’s Roast Beef &amp; Pizza (3 Locations)</h4>  
-          &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp<img src="images/ImageHandler.jpg" class="img-responsive hidden-xs" width="65%" height="65%" alt="" title="">
+         <b>Details:</b> &nbsp&nbsp&nbsp <div> <h4>&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp {{str1}}</h4>  
+          &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp
+		  <img src="{{path}}" class="img-responsive hidden-xs" width="65%" height="65%" alt="" title="">
          </div>
         
          <div><br/><br/> 
@@ -106,14 +112,15 @@
         How likely is it that you would recommend Flipkart to a friend or colleague? <br/><br/>
         </p>
         </div>
+		{{/each}}
+		</script>
                 </div>
 
-                  
-
-                    </form>
+                   
 
 
 </div>
+ </form>
 
                
    </div>
@@ -225,7 +232,7 @@
 
     </div>
 
-
+      <script src="confirmation.js"></script>
       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
       <script src="https://code.jquery.com/jquery.js"></script>
       <!-- Include all compiled plugins (below), or include individual files 
