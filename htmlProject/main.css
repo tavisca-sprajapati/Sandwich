@@ -905,3 +905,8 @@ font-size: 1.0em;
 .headline-area {
 height:125px;
 }
+
+
+.validation{
+color:red;
+}
