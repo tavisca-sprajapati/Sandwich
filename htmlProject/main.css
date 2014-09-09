@@ -39,6 +39,7 @@
 
 .showLess-css
 {
+	cursor:pointer;
 	background-color:red;
 	width:100px;
 	height:20px;
@@ -48,6 +49,7 @@
 
 .showme-css
 {
+	cursor:pointer;
 	background-color:#F55D1C;
 	width:100px;
 	height:20px;
@@ -60,7 +62,7 @@
 .hotPanel
 {
 	background-color:#008080;
-	cursor:pointer;
+	
 	position:fixed;
 	top:100px;
 	right:10px;

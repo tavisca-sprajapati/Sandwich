@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title></title>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	        <script src="jquery-ui-1.11.1.custom/jquery-ui.js"></script>
+	        <link href="jquery-ui.css" rel="stylesheet">
+</head>
+<body>
+<div style="background-color:green;width:100px;height:100px;position:fix;" id="abc">
+<div style="background-color:red;width:50px;height:50px;"></div>
+</div>
+
+	       
+	        <script>
+	        	$(function() {
+    				$("#abc").draggable({ containment: "window" });});
+	        </script>
+
+</body>
+</html>

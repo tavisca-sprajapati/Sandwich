@@ -91,63 +91,38 @@
            <h3> <strong></br>Featured Deals</strong></h3>
                <hr>
                <div class="row" id="MainRow">
-
-      
-
                   <script id="sat2" type="text/x-handlebars-template">
-
-
                     {{#each thumb}} 
- <div class="col-xs-12 col-md-4 col-sm-6">
-       <a href="#" class="thumbnail"  style="text-decoration: none">
-               <span class="headline">
-               {{mainTitle}}
-               </span>
-
-               <div id="f1_container">
-<div id="f1_card" class="shadow">
-  <div class="front face">
-     <img src="{{path}}" alt="images/Desert.jpg" width="100%" height="100%">
-  </div>
-  <div class="back face center">
-    <p>This is nice for exposing more information about an image.</p>
-    <p>Any content can go here.</p>
-      </div>
-      </div>
-</div>
-      <table cellpadding="0" cellspacing="0" border="0" width=100%>
-            <tr>
-               <td class="locale">{{td1}}</td>
-           <td class="full-price">{{td2}}</td>
-                        <td class="discount-price">{{td3}}</td>
-               </tr>
-      </table>
-
-      </a>
-      </div>
-
-
-
-
-    {{/each}}
-
-
-
-                   
+                      <div class="col-xs-12 col-md-4 col-sm-6">
+                        <a href="#" class="thumbnail"  style="text-decoration: none">
+                          <span class="headline">
+                            {{mainTitle}}
+                          </span>
+                          <div id="f1_container">
+                            <div id="f1_card" class="shadow">
+                              <div class="front face">
+                                <img src="{{path}}" alt="images/Desert.jpg" width="100%" height="100%">
+                              </div>
+                            <div class="back face center">
+                              <p>more information about an image.</p>
+                              <p>Any content can go here.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <table cellpadding="0" cellspacing="0" border="0" width=100%>
+                          <tr>
+                            <td class="locale">{{td1}}</td>
+                            <td class="full-price">{{td2}}</td>
+                            <td class="discount-price">{{td3}}</td>
+                          </tr>
+                        </table>
+                        </a>
+                      </div>
+                    {{/each}}
                   </script>
-
-
-    
                 </div>
-
-
-
-
-
-               </div>
-
-               
-   </div>
+               </div>             
+            </div>
 
 
 
