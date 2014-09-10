@@ -1,0 +1,78 @@
+
+var tilesDetails = {"thumbnails":[
+        {
+        	"mainTitle":"$10 for $20 Worth of Food at DRAE-A Tapas Experience-in Derry",
+        	"path":"images/ImageHandler.jpg",
+        	"td1":"Derry, NH",
+        	"td2":"$20",
+        	"td3":"$10" ,
+        	"links":"GridDetails.html"
+        },
+        {
+        	"mainTitle":"$10 for $20 Worth of Food at DRAE-A Tapas Experience-in Derry",
+        	"path":"images/ImageHandler (2).jpg",
+        	"td1":"Derry, NH",
+        	"td2":"$20",
+        	"td3":"$10" ,
+        	"links":"GridDetails.html"
+        },
+		{
+        	"mainTitle":"$10 for $20 Worth of Food at DRAE-A Tapas Experience-in Derry",
+        	"path":"images/ImageHandler (3).jpg",
+        	"td1":"Derry, NH",
+        	"td2":"$20",
+        	"td3":"$10" ,
+        	"links":"GridDetails.html"
+        },
+
+        {
+        	"mainTitle":"$10 for $20 Worth of Food at DRAE-A Tapas Experience-in Derry",
+        	"path":"images/ImageHandler (4).jpg",
+        	"td1":"Derry, NH",
+        	"td2":"$20",
+        	"td3":"$10" ,
+        	"links":"GridDetails.html"
+        },
+        {
+        	"mainTitle":"$10 for $20 Worth of Food at DRAE-A Tapas Experience-in Derry",
+        	"path":"images/ImageHandler (5).jpg",
+        	"td1":"Derry, NH",
+        	"td2":"$20",
+        	"td3":"$10" ,
+        	"links":"GridDetails.html"
+        },
+
+        {
+        	"mainTitle":"$10 for $20 Worth of Food at DRAE-A Tapas Experience-in Derry",
+        	"path":"images/ImageHandler (6).jpg",
+        	"td1":"Derry, NH",
+        	"td2":"$20",
+        	"td3":"$10" ,
+        	"links":"GridDetails.html"
+        },
+        {
+        	"mainTitle":"$10 for $20 Worth of Food at DRAE-A Tapas Experience-in Derry",
+        	"path":"images/ImageHandler (7).jpg",
+        	"td1":"Derry, NH",
+        	"td2":"$20",
+        	"td3":"$10" ,
+        	"links":"GridDetails.html"
+        },
+        {
+        	"mainTitle":"$10 for $20 Worth of Food at DRAE-A Tapas Experience-in Derry",
+        	"path":"images/ImageHandler (8).jpg",
+        	"td1":"Derry, NH",
+        	"td2":"$20",
+        	"td3":"$10" ,
+        	"links":"GridDetails.html"
+        },
+        {
+        	"mainTitle":"$10 for $20 Worth of Food at DRAE-A Tapas Experience-in Derry",
+        	"path":"images/ImageHandler.jpg",
+        	"td1":"Derry, NH",
+        	"td2":"$20",
+        	"td3":"$10" ,
+        	"links":"GridDetails.html"
+        }
+        ]
+    };
