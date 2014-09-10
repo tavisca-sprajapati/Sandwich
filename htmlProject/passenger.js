@@ -1,85 +1,115 @@
-  var ck_firstname = /^[A-Za-z]{3,20}$/;
-  var ck_lastname = /^[A-Za-z]{3,20}$/;
-  var ck_mail=/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-  var ck_confirmmail=/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-  var ck_zip=/^[0-9]{6}$/;
-  var ck_password = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}/;
-  var ck_confirmpassword = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}/;
-
+  var firstname_regex = /^[A-Za-z]{3,20}$/;
+  var lastname_regex = /^[A-Za-z]{3,20}$/;
+  var email_regex = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+  var confirmemail_regex=/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+  var zipcode_regex=/^[0-9]{6}$/;
+  var password_regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}/;
+  var confirmpassword_regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}/;
 
     function validateForm()
   {
-    var selectMi=document.getElementById("dropdown");
-    var selected_value=selectMi.options[selectMi.selectedIndex].value;
-    var first_name=PassengerDetailsForm.firstname.value;
-    var last_name=PassengerDetailsForm.lastname.value;
-    var mail_id=PassengerDetailsForm.email.value;
-    var confirm_mail=PassengerDetailsForm.confirmemail.value;
-    var zip=PassengerDetailsForm.zipcode.value;
-    var password=PassengerDetailsForm.password.value;
-    var confirm_password=PassengerDetailsForm.confirmpassword.value;
-
-
-    if (!ck_firstname.test(first_name)) 
-    {
-	 // PassengerDetailsForm.firstname.value="check name";
     
-	
-	  
-     alert("Please enter a valid First Name!!!");
+    var first_pattern=$('#firstname').val();
+    var last_pattern=$('#lastname').val();
+    var mi_pattern =  $('#mi').val();
+    var email_pattern = $('#email').val();
+    var confirmemail_pattern=$('#confirmemail').val();
+    var zipcode_pattern = $('#zipcode').val();
+    var password_pattern = $('#password').val();
+    var confirmpassword_pattern = $('#confirmpassword')
+
+    if (!firstname_regex.test(first_pattern)) 
+    {
+	    $("#firstname").focus();
+      $("#1").html("* For your first name please use alphabets only! *");
       return false;
+    }
+    else
+    {
+      $("#1").html("");
     }
 
-	
-    if (!ck_lastname.test(last_name)) 
+    if (!lastname_regex.test(last_pattern)) 
     {
-	  //PassengerDetailsForm.lastname.value="check lastname";
-      alert("Please enter a valid Last name!!!");
+      $("#lastname").focus();
+      $("#2").html("* For your last name please use alphabets only! *");
       return false;
     }
-    if(!ck_mail.test(mail_id))
+    else
     {
-	  //PassengerDetailsForm.mail.value="check mail";
-      alert("Please enter a valid email id!!!");
+      $("#2").html("");
+    }
+
+    if(mi_pattern=="Please Select")
+    {
+      $("#mi").focus();
+      $('#3').text("* Please select any one category! *");
       return false;
     }
-    if(!ck_confirmmail.test(confirm_mail)||confirm_mail!=mail_id)
+    else
     {
-      alert("Email_id doesn't match!!!");
+     $('#3').text("");
+    }
+
+    if(!email_regex.test(email_pattern))
+    {
+     $("#email").focus();
+     $('#4').text("* This is not the valid format of email! *");
+     return false;
+    }
+   else
+    {
+     $('#4').text("");
+    }
+
+    if(!confirmemail_regex.test(confirmemail_pattern)||confirmemail_pattern!=email_pattern)
+    {
+      $("#confirmemail").focus();
+      $('#5').text("* Emial-id doesn't match! *");
       return false;
     }
-    if(!ck_zip.test(zip))
+    else
     {
-      alert("Enter a correct zip code!");
+      $('#5').text("");
+    }
+
+    if(!zipcode_regex.test(zipcode_pattern))
+    {
+     $("#zipcode").focus();
+     $('#6').text("* This is not the valid zipcode! *");
+     return false;
+    }
+   else
+    {
+     $('#6').text("");
+    }
+
+    if(!password_regex.test(password_pattern))
+    {
+      $("#password").focus();
+      $('#7').text("* This is not the valid password! *");
       return false;
     }
-    if (!ck_password.test(password)) 
+   else
     {
-      alert("You must enter a valid Password ");
+      $('#7').text("");
+    }
+
+
+    if (!confirmpassword_pattern.test(password_pattern))
+    {
+      $("#confirmpassword").focus();
+      $('#8').text("* Password doesn't match! *");
       return false;
     }
-    if (!ck_password.test(password)||confirm_password!=password) 
+   else
     {
-      alert("Password doesn't match");
-      return false;
+      $('#8').text("");
     }
-    if(selected_value==0)
-    {
-      alert("please select a user!!!");
-      return false;
-    }
-   
+
+
+  
   }
-  
-  
-  
-  /*
-  function color(target)
-{
 
-document.getElementById('target').style.backgroundColor="#006400";
-//var targetbox =  document.getElementById(target);
-//targetbox.style.backgroundColor="red";
-}
-*/
-  
+	
+   

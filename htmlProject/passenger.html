@@ -11,6 +11,7 @@
       <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="main.css" rel="stylesheet">
      <link rel="icon" href="favicon.ico" type="image/x-icon">
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	  <script src="passenger.js"></script>
     <script src="headervalidation.js"></script>
 
@@ -100,23 +101,28 @@
                     <div>
                     <div class="col-md-4 col-sm-6 col-xs-12">
                       <div class="firstname">*First Name</div>
-                      <div><input type="text" name="firstname" > </div>
+                      <div><input type="text" id="firstname" onblur="return validateForm()"> </div>
+                      <div id="1" class="validation"></div>
                     </div>
+                    
+
                     <div class="col-md-4 col-sm-6 col-xs-12">
                       <div class="firstname">*Last Name</div>
-                      <div><input type="text" name="lastname"> </div>
+                      <div><input type="text" id="lastname" onblur="return validateForm()"> </div>
+                      <div id="2" class="validation"></div>
                     </div>
                     
 
                     <div class="col-md-4 col-sm-6 col-xs-12">
                       <div class="firstname">*M.I.</div>
                       <div>
-                      <select id="dropdown">
-                          <option value="0">---Select---</option>
-                          <option value="1">Mr.</option>
-                          <option value="2">Mrs.</option>
-                          <option value="3">Miss</option>
+                      <select id="mi" onblur="return validateForm()">
+                          <option>Please Select</option>
+                          <option>Mr.</option>
+                          <option>Mrs.</option>
+                          <option>Miss</option>
                         </select> 
+                        <div id="3" class="validation"></div>
                       </div>
                     </div>
                     
@@ -124,34 +130,44 @@
                     <div>
                       <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="firstname">*Email Address</div>
-                      <center><div><input type="text" name="email" style="width:100%"> </div></center>
+                        <center>
+                          <div><input type="text" id="email" style="width:100%" onblur="return validateForm()"> </div>
+                          <div id="4" class="validation" ></div>
+                        </center>
                       </div>
+
                       <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="firstname">*Confirm Email Address</div>
-                      <center><div><input type="text" name="confirmemail" style="width:100%"> </div></center>
+                        <center>
+                          <div><input type="text" id="confirmemail" style="width:100%" onblur="return validateForm()"> </div>
+                          <div id="5" class="validation"></div>
+                        </center>
                       </div>
                     </div>
                     <div>
                       <div class="col-md-12 col-sm-12 col-xs-12">
                          <div class="firstname">*Zip Code</div>
-                      <div><input type="text" name="zipcode"> </div>
+                         <div><input type="text" id="zipcode"> </div>
+                         <div id="6" class="validation"></div>
                       </div>
-                      </div>
+                    </div>
                      <div>
                       <div class="col-md-12 col-sm-12 col-xs-12">
                          <div class="pass"><br/>Passwords are required to be a minimum of 6 characters in length.</div>
                       </div>
                       </div> 
                       <div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                      <div class="firstname">*Password</div>
-                      <div><input type="password" name="password"> </div>
-                    </div>
-                  </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                          <div class="firstname">*Password</div>
+                          <div><input type="password" id="password" onblur="return validateForm()"> </div>
+                          <div id="7" class="validation"></div>
+                        </div>
+                      </div>
                   <div>
                     <div class="col-md-12 col-sm-12 col-xs-12">
                       <div class="firstname">*Confirm Password</div>
-                      <div><input type="password" name="confirmpassword"> </div>
+                      <div><input type="password" id="confirmpassword" onblur="return validateForm()"> </div>
+                      <div id="8" class="validation"></div>
                     </div>
                   </div>
                     <div>
