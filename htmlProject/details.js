@@ -1,9 +1,7 @@
-  $(document).ready(function(){
-  $("#flip").click(function(){
-    $("#panel").slideToggle("slow");
-  });
+$(document).ready(function(){
 
-$("#lab").draggable({ containment: "window" });
+  $("#lab").draggable({ axis:"y" });
+
   $("#showMe").click(function(){
 
     $("#lab").animate({width:'300px',height:'550px'});
@@ -15,36 +13,11 @@ $("#lab").draggable({ containment: "window" });
 
 
 $("#ShowLess").click(function(){
-$("#lab").animate({width:'150px',height:'30px'});
-$("#mainpage").attr("style","overflow-y:auto;width:0px;height:0px;");
-$("#ShowLess").hide();
-$("#showMe").show();
+  $("#lab").animate({width:'150px',height:'30px'});
+  $("#mainpage").attr("style","overflow-y:auto;width:0px;height:0px;");
+  $("#ShowLess").hide();
+  $("#showMe").show();
+
+  });
 
 });
-
-
-
-});
-
-
-
-
-
-
-/*
-  $("#flip").click(function(){
-    $("#panel").slideDown(3000);
-	
-
-	
-  });
- 
-  $("#flipUp").click(function(){
-    $("#p1").css("color","red")
-      .slideUp(3000);
-      
-  });
-  */
-  
-  
- 

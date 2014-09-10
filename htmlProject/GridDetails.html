@@ -28,27 +28,34 @@
 <body>
 
 
-
-    <div id="header-wrapper">
-        <div class="w1">
+<div id="header-wrapper">
+         <div class="w1">
             <div class="w2">
-                <div id="header">
-                    <div class="heading">
-                        <strong class="text-hello-friend">Hello Friend, you're new here right?</strong>
-                        <span class="text-sign-up">Subscribe to our emails and never miss a deal!</span>
+               <div id="header">
+                  <div class="heading">
+                     <strong class="text-hello-friend">Hello Friend, you're new here right?</strong>
+                     <span class="text-sign-up">Subscribe to our emails and never miss a deal!</span>
+                  </div>
+                  <form action="index.html" class="form-email" name="myform" onsubmit="return checkvalidation();" method="post">
+                     <fieldset>
+                      
+                      <div style="width:40%;float:left;">
+                        <input type="text" id="txtEmail" placeholder="Enter Email Address" class="emailInput" tabindex="1" onblur="lemailValidation()"/><div id="email_failed" class="Error"></div>
+                        </div>
+                        <div style="width:25%;float:left;">&nbsp
+                        <input type="text" id="zip" name="zip" placeholder="Enter Zip Code" class="zipInput" tabindex="2" onblur="lzipValidation()"/>
+                       <div id="zip_failed" class="Error"></div>
+                       </div>
+                       <div style="width:8%;float:left;">
+                        <input type="submit" value="." class="btn-sign-up"  tabindex="3"/>
                     </div>
-                    <form action="#" class="form-email">
-                        <fieldset>
-                            <input type="text" value="Enter Email Address" class="emailInput" tabindex="1" title="Enter Email Address" onfocus="if(this.value == this.defaultValue) this.value = ''" />
-                            <input type="text" value="Enter Zip Code" class="zipInput" tabindex="2" title="Enter Zip Code" onfocus="if(this.value == this.defaultValue) this.value = ''" />
-                            <input type="submit" value="" class="btn-sign-up" tabindex="3" title="Subscribe" />
-                        </fieldset>
-                    </form>
-                </div>
+                     </fieldset>
+                  </form>
+                  <a href="dealregistration.html">Register Deal</a>
+               </div>
             </div>
-        </div>
-    </div>
-
+         </div>
+      </div>
 
     <!--Master wrapper start from here-->
 
@@ -76,7 +83,7 @@
 
                 </div>
             </div>
-
+        </br>
             <table border="0">
                 <tr>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
