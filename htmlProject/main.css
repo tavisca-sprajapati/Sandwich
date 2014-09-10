@@ -358,6 +358,12 @@ float:left;
 	width: 100px;
 }
 
+.form-email .Error {
+	color: red;
+}
+
+
+
 .form-email .btn-sign-up{
 	background:url(images/btn-sign-up.png) no-repeat;
 	width:134px;
