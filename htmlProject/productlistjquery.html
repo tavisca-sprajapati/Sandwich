@@ -16,7 +16,7 @@
      <script src="handlebars-v2.0.0.js"></script>
      <script src="productlistjquery.js"></script>
      <script src="headervalidation.js"></script>
-
+<script type="text/javascript" language="javascript" src="jsons/ProductListJson.json"></script>
      
 
    </head>
@@ -39,6 +39,7 @@
                         <input type="submit" value="" class="btn-sign-up"  tabindex="3" title="Subscribe"/>
                      </fieldset>
                   </form>
+                  <a href="dealregistration.html">Register Deal</a>
                </div>
             </div>
          </div>
@@ -62,6 +63,7 @@
                 <button type="button" class="btn btn-default">Merchants</button>
                 <button type="button" class="btn btn-default">FAQs</button>
                 <button type="button" class="btn btn-default">About Us</button>
+
              </div>
           </div>
 
@@ -92,9 +94,9 @@
                <hr>
                <div class="row" id="MainRow">
                   <script id="sat2" type="text/x-handlebars-template">
-                    {{#each thumb}} 
+                    {{#each thumbnails}} 
                       <div class="col-xs-12 col-md-4 col-sm-6">
-                        <a href="#" class="thumbnail"  style="text-decoration: none">
+                        <a href="{{links}}" class="thumbnail"  style="text-decoration: none">
                           <span class="headline">
                             {{mainTitle}}
                           </span>

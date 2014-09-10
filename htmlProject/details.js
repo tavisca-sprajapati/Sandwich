@@ -4,7 +4,6 @@
   });
 
 $("#lab").draggable({ containment: "window" });
-
   $("#showMe").click(function(){
 
     $("#lab").animate({width:'300px',height:'550px'});
@@ -16,7 +15,7 @@ $("#lab").draggable({ containment: "window" });
 
 
 $("#ShowLess").click(function(){
-$("#lab").animate({width:'100px',height:'20px'});
+$("#lab").animate({width:'150px',height:'30px'});
 $("#mainpage").attr("style","overflow-y:auto;width:0px;height:0px;");
 $("#ShowLess").hide();
 $("#showMe").show();

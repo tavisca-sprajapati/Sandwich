@@ -10,7 +10,15 @@
       <link href="bootstrap/css/bootstrap-theme.css" rel="styleshee">
       <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="main.css" rel="stylesheet">
+  <link href="flip.css" rel="stylesheet">
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+     <script src="handlebars-v2.0.0.js"></script>
+     <script src="productlistjquery.js"></script>
      <script src="headervalidation.js"></script>
+<script type="text/javascript" language="javascript" src="jsons/ProductListJson.json"></script>
+     
+
    </head>
    <body>
 
@@ -31,6 +39,7 @@
                         <input type="submit" value="" class="btn-sign-up"  tabindex="3" title="Subscribe"/>
                      </fieldset>
                   </form>
+                  <a href="dealregistration.html">Register Deal</a>
                </div>
             </div>
          </div>
@@ -54,8 +63,11 @@
                 <button type="button" class="btn btn-default">Merchants</button>
                 <button type="button" class="btn btn-default">FAQs</button>
                 <button type="button" class="btn btn-default">About Us</button>
+
              </div>
           </div>
+
+
 
           <table border=0>
              <tr>
@@ -78,189 +90,39 @@
          
            <h3> <strong></br>Featured Deals</strong></h3>
                <hr>
-               <div class="row">
-
-      
-      <div class="col-xs-12 col-md-4 col-sm-6">
-       <a href="#" class="thumbnail"  style="text-decoration: none">
-               <span class="headline">
-               $10 for $20 Worth of Food at DRAE - A Tapas Experience - in Derry
-               </span>
-      <img src="images/ImageHandler.jpg" alt="images/Desert.jpg">
-      
-      <table cellpadding="0" cellspacing="0" border="0" width=100%>
-            <tr>
-               <td class="locale">Derry, NH</td>
-           <td class="full-price">$20</td>
-                        <td class="discount-price">$10</td>
-               </tr>
-      </table>
-      </a>
-      </div>
-
-
-      <div class="col-xs-12 col-md-4 col-sm-6">
-       <a href="#" class="thumbnail"  style="text-decoration: none">
-               <span class="headline">
-               $10 for $20 Worth of Food at DRAE - A Tapas Experience - in Derry
-               </span>
-      <img src="images/ImageHandler (2).jpg" alt="images/Desert.jpg">
-      
-      <table cellpadding="0" cellspacing="0" border="0" width=100%>
-            <tr>
-               <td class="locale">Derry, NH</td>
-           <td class="full-price">$20</td>
-                        <td class="discount-price">$10</td>
-               </tr>
-      </table>
-
-      </a>
-      </div>
-
-
-<div class="col-xs-12 col-md-4 col-sm-6">
-       <a href="#" class="thumbnail"  style="text-decoration: none">
-               <span class="headline">
-               $10 for $20 Worth of Food at DRAE - A Tapas Experience - in Derry
-               </span>
-      <img src="images/ImageHandler (1).jpg" alt="images/Desert.jpg">
-      
-      <table cellpadding="0" cellspacing="0" border="0" width=100%>
-            <tr>
-               <td class="locale">Derry, NH</td>
-           <td class="full-price">$20</td>
-                        <td class="discount-price">$10</td>
-               </tr>
-      </table>
-
-      </a>
-      </div>
-
-
-            <div class="col-xs-12 col-md-4 col-sm-6">
-       <a href="#" class="thumbnail"  style="text-decoration: none">
-               <span class="headline">
-               Auto Inspection or Air Conditioning Service (Up to 56% Off)
-               </span>
-      <img src="images/ImageHandler (3).jpg" alt="images/Desert.jpg">
-      
-      <table cellpadding="0" cellspacing="0" border="0" width=100%>
-            <tr>
-               <td class="locale">Derry, NH</td>
-           <td class="full-price">$20</td>
-                        <td class="discount-price">$10</td>
-               </tr>
-      </table>
-      </a>
-      </div>
-
-
-      <div class="col-xs-12 col-md-4 col-sm-6">
-       <a href="#" class="thumbnail"  style="text-decoration: none">
-               <span class="headline">
-               Lunch/Dinner at Gauchos Brazilian Steak House (Up to 53% Off)
-               </span>
-      <img src="images/ImageHandler (4).jpg" alt="images/Desert.jpg">
-      
-      <table cellpadding="0" cellspacing="0" border="0" width=100%>
-            <tr>
-               <td class="locale">Derry, NH</td>
-           <td class="full-price">$20</td>
-                        <td class="discount-price">$10</td>
-               </tr>
-      </table>
-
-      </a>
-      </div>
-
-
-<div class="col-xs-12 col-md-4 col-sm-6">
-       <a href="#" class="thumbnail"  style="text-decoration: none">
-               <span class="headline">
-               $12 for a Full Day Boat Rental for One at Edgewater Canoe and Kayak
-               </span>
-      <img src="images/ImageHandler (5).jpg" alt="images/Desert.jpg">
-      
-      <table cellpadding="0" cellspacing="0" border="0" width=100%>
-            <tr>
-               <td class="locale">Derry, NH</td>
-           <td class="full-price">$20</td>
-                        <td class="discount-price">$10</td>
-               </tr>
-      </table>
-
-      </a>
-      </div>
-
-
-
-            <div class="col-xs-12 col-md-4 col-sm-6">
-       <a href="#" class="thumbnail"  style="text-decoration: none">
-               <span class="headline">
-               2-Hour Lazer Tag Party by Village Idiotz Party Rentals ($100 Savings)
-               </span>
-      <img src="images/ImageHandler (6).jpg" alt="images/Desert.jpg">
-      
-      <table cellpadding="0" cellspacing="0" border="0" width=100%>
-            <tr>
-               <td class="locale">Derry, NH</td>
-           <td class="full-price">$20</td>
-                        <td class="discount-price">$10</td>
-               </tr>
-      </table>
-      </a>
-      </div>
-
-
-      <div class="col-xs-12 col-md-4 col-sm-6">
-       <a href="#" class="thumbnail"  style="text-decoration: none">
-               <span class="headline">
-               A 3-Hour Painting Experience at Graffiti Paintbar (Up to 50% Off)
-               </span>
-      <img src="images/ImageHandler (7).jpg" alt="images/Desert.jpg">
-      
-      <table cellpadding="0" cellspacing="0" border="0" width=100%>
-            <tr>
-               <td class="locale">Derry, NH</td>
-           <td class="full-price">$20</td>
-                        <td class="discount-price">$10</td>
-               </tr>
-      </table>
-
-      </a>
-      </div>
-
-
-<div class="col-xs-12 col-md-4 col-sm-6">
-       <a href="#" class="thumbnail"  style="text-decoration: none">
-               <span class="headline">
-               $12 for a Full Day Boat Rental for One at Edgewater Canoe and Kayak
-               </span>
-      <img src="images/ImageHandler (8).jpg" alt="images/Desert.jpg">
-      
-      <table cellpadding="0" cellspacing="0" border="0" width=100%>
-            <tr>
-               <td class="locale">Derry, NH</td>
-           <td class="full-price">$20</td>
-                        <td class="discount-price">$10</td>
-               </tr>
-      </table>
-
-      </a>
-      </div>
-
-
-
-</div>
-
-
-
-
-
-               </div>
-
-               
-   </div>
+               <div class="row" id="MainRow">
+                  <script id="sat2" type="text/x-handlebars-template">
+                    {{#each thumbnails}} 
+                      <div class="col-xs-12 col-md-4 col-sm-6">
+                        <a href="{{links}}" class="thumbnail"  style="text-decoration: none">
+                          <span class="headline">
+                            {{mainTitle}}
+                          </span>
+                          <div id="f1_container">
+                            <div id="f1_card" class="shadow">
+                              <div class="front face">
+                                <img src="{{path}}" alt="images/Desert.jpg" width="100%" height="100%">
+                              </div>
+                            <div class="back face center">
+                              <p>more information about an image.</p>
+                              <p>Any content can go here.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <table cellpadding="0" cellspacing="0" border="0" width=100%>
+                          <tr>
+                            <td class="locale">{{td1}}</td>
+                            <td class="full-price">{{td2}}</td>
+                            <td class="discount-price">{{td3}}</td>
+                          </tr>
+                        </table>
+                        </a>
+                      </div>
+                    {{/each}}
+                  </script>
+                </div>
+               </div>             
+            </div>
 
 
 
@@ -373,6 +235,7 @@
       <script src="https://code.jquery.com/jquery.js"></script>
       <!-- Include all compiled plugins (below), or include individual files 
             as needed -->
+            <script src="handletry2.js"></script>
       <script src="bootstrap/js/bootstrap.min.js"></script>
    </body>
 </html>

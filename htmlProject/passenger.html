@@ -12,6 +12,7 @@
 	<link href="main.css" rel="stylesheet">
      <link rel="icon" href="favicon.ico" type="image/x-icon">
 	  <script src="passenger.js"></script>
+    <script src="headervalidation.js"></script>
 
 	
    </head>
@@ -27,10 +28,10 @@
                      <strong class="text-hello-friend">Hello Friend, you're new here right?</strong>
                      <span class="text-sign-up">Subscribe to our emails and never miss a deal!</span>
                   </div>
-                  <form action="#" class="form-email">
+                  <form action="index.html" class="form-email" name="myform" onsubmit="return checkEmail();" method="post">
                      <fieldset>
-                        <input type="text" value="Enter Email Address" class="emailInput" tabindex="1" title="Enter Email Address" onfocus="if(this.value == this.defaultValue) this.value = ''"/>
-                        <input type="text" value="Enter Zip Code" class="zipInput" tabindex="2" title="Enter Zip Code" onfocus="if(this.value == this.defaultValue) this.value = ''"/>
+                        <input type="text" id="txtEmail" placeholder="Enter Email Address" class="emailInput" tabindex="1" title="Enter Email Address" onfocus="if(this.value == this.defaultValue) this.value = ''"/>
+                        <input type="text" id="zip" name="zip" placeholder="Enter Zip Code" class="zipInput" tabindex="2" title="Enter Zip Code" onfocus="if(this.value == this.defaultValue) this.value = ''"/>
                         <input type="submit" value="" class="btn-sign-up"  tabindex="3" title="Subscribe"/>
                      </fieldset>
                   </form>
