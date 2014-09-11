@@ -251,7 +251,7 @@ $(document).ready(function(){
 		}
 	});
 	$("#confirmpassword").blur(function(){
-		var password_pattern2 = $('#password').val();
+		var password_pattern2 = $("#confirmpassword").val();
 		if(password_pattern==password_pattern2)
 		{
 			$('#8').text("");
