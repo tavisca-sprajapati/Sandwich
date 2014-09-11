@@ -10,7 +10,7 @@ var password_regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}/;
 $(document).ready(function(){
 
 	$("#category").change(function(){
-	   // alert("change");
+	   
 	        var category_pattern = $('#category').val();
 	       if(category_pattern=="Please Select")
 			{
@@ -23,7 +23,7 @@ $(document).ready(function(){
 	});
 
 	$("#title").click(function(){
-		//alert("hello");
+	
 	});
 	
 	$("#title").blur(function()
@@ -41,7 +41,7 @@ $(document).ready(function(){
 			$( "#description" ).prop( "disabled", false );
 		
 		}
-		//alert("hello2");
+	
 	});
 	
 	$("#description").blur(function()
@@ -52,7 +52,7 @@ $(document).ready(function(){
 			$("#description").focus();
 			$('#3').text("* Please enter some description! *");
 			$( "#photo" ).prop( "disabled", true );
-			//return false;
+			
 		}
 		else
 		{
@@ -136,7 +136,7 @@ $(document).ready(function(){
 	
 	$("#check").click(function()
 	{
-	      //alert("chekin");
+	      
 			if($('#check').is(':checked'))
 			{  //	alert("chekin");
 				$("#btn_submit").prop( "disabled", false);
@@ -162,7 +162,7 @@ $(document).ready(function(){
 			$( "#lastname" ).prop( "disabled", false );
 		
 		}
-		//alert("hello2");
+		
 	});
 	
 	
@@ -181,10 +181,10 @@ $(document).ready(function(){
 			$( "#email" ).prop( "disabled", false );
 		
 		}
-	 //alert("hello2");
+	
 	});
 		$("#email").blur(function()
-	{			//alert("helllllllllllllooooooooooo");
+	{		
 		 email_pattern = $('#email').val();
 		if(!email_regex.test(email_pattern))
 		{
@@ -201,7 +201,7 @@ $(document).ready(function(){
 	});
 	$("#confirmemail").blur(function()
 	{
-		//alert("helllllllllllll");
+
 		var email_pattern1 = $('#confirmemail').val();
 		if( email_pattern==email_pattern1)
 		{
