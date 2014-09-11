@@ -22,6 +22,7 @@
 
 
 
+
 <div id="header-wrapper">
          <div class="w1">
             <div class="w2">
@@ -30,13 +31,22 @@
                      <strong class="text-hello-friend">Hello Friend, you're new here right?</strong>
                      <span class="text-sign-up">Subscribe to our emails and never miss a deal!</span>
                   </div>
-                  <form action="#" class="form-email">
+                  <form action="index.html" class="form-email" name="myform" onsubmit="return checkvalidation();" method="post">
                      <fieldset>
-                        <input type="text" value="Enter Email Address" class="emailInput" tabindex="1" title="Enter Email Address" onfocus="if(this.value == this.defaultValue) this.value = ''"/>
-                        <input type="text" value="Enter Zip Code" class="zipInput" tabindex="2" title="Enter Zip Code" onfocus="if(this.value == this.defaultValue) this.value = ''"/>
-                        <input type="submit" value="" class="btn-sign-up"  tabindex="3" title="Subscribe"/>
+                      
+                      <div style="width:40%;float:left;">
+                        <input type="text" id="txtEmail" placeholder="Enter Email Address" class="emailInput" tabindex="1" onblur="lemailValidation()"/><div id="email_failed" class="Error"></div>
+                        </div>
+                        <div style="width:25%;float:left;">&nbsp
+                        <input type="text" id="zip" name="zip" placeholder="Enter Zip Code" class="zipInput" tabindex="2" onblur="lzipValidation()"/>
+                       <div id="zip_failed" class="Error"></div>
+                       </div>
+                       <div style="width:8%;float:left;">
+                        <input type="submit" value="." class="btn-sign-up"  tabindex="3"/>
+                    </div>
                      </fieldset>
                   </form>
+                  <a href="dealregistration.html">Register Deal</a>
                </div>
             </div>
          </div>
@@ -62,7 +72,7 @@
                 <button type="button" class="btn btn-default">About Us</button>
              </div>
           </div>
-
+            </br>
           <table border=0>
              <tr>
                 <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
@@ -223,13 +233,12 @@
 
 
 <!--end of body-->
-<div>
+<div style="padding:1% 1% 1% 1%">
 
      <div class="row">
-     </br>
       <div class="col-md-15 col-sm-3">
                         
-                           <ul style="list-style-type: none;">
+                           <ul class="footer-new-deal-ul">
                               <li><h4><p class="footer-side">New Deal</p></h4></li>
                               <li class="internal-li">
                         Microdermabrasion &amp; Facial Options with Jenn Bernier (Up to 65% Off)</li>
@@ -241,7 +250,7 @@
       </div>
 
        <div class="col-md-15 col-sm-3">
-            <ul style="list-style-type: none;">
+            <ul class="footer-new-deal-ul">
                               <li><h4><p class="footer-side">More Deal</p></h4></li>
                               <li class="internal-li">
                         $10 for $20 Worth of Food at DRAE - A Tapas Experience - in Derry</li>
@@ -274,7 +283,7 @@
       </div>
        <div class="col-md-15 col-sm-3">
          
-            <ul style="list-style-type: none;">
+            <ul class="footer-new-deal-ul">
                               <li><h4><p class="footer-side">Past Deals</p></h4></li>
                               <li class="internal-li">
                         Auto Inspection or Air Conditioning Service (Up to 56% Off)</li>
@@ -285,7 +294,7 @@
       </div>
        <div class="col-md-15 col-sm-3">
             
-             <ul style="list-style-type: none;">
+             <ul class="footer-new-deal-ul">
                               <li><h4><p class="footer-side">How It Works</p></h4></li>
                               <li class="internal-li">
                         Free to join Couptopia. Receive emails in your inbox with new deals. Purchase and receive an easy to use redeemable voucher. Consumers and merchants win!</li>
@@ -302,7 +311,7 @@
             <ul class="contact-footer">
                               <li><span class="logo-best-daily"><a href="#">best logo</a></span></li>
                               <li class="internal-li">
-                                    Couptopia, Inc. Ã‚Â© 2014</br>
+                                    Couptopia, Inc. Â© 2014</br>
                                     P.O. Box 3485</br>
                                     Manchester, NH 03105-3485</br>
                                     603-587-0254</br>
