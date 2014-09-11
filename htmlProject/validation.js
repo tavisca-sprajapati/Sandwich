@@ -22,9 +22,6 @@ $(document).ready(function(){
 
 	});
 
-	$("#title").click(function(){
-	
-	});
 	
 	$("#title").blur(function()
 	{	var title_pattern =  $('#title').val();
@@ -41,7 +38,7 @@ $(document).ready(function(){
 			$( "#description" ).prop( "disabled", false );
 		
 		}
-	
+
 	});
 	
 	$("#description").blur(function()
@@ -52,7 +49,7 @@ $(document).ready(function(){
 			$("#description").focus();
 			$('#3').text("* Please enter some description! *");
 			$( "#photo" ).prop( "disabled", true );
-			
+			//return false;
 		}
 		else
 		{
@@ -67,23 +64,19 @@ $(document).ready(function(){
 	      var imgname=$("#photo").val();
 	   
 		 if (!(/\.(gif|jpg|jpeg|tiff|png)$/i).test(imgname))  
-		    {       //alert("if");       
-             alert('You must select an image file only');
+		    {         
+           
 		     $( "#contact" ).prop( "disabled", true);			 
             }
 			else
 			{
 		     $( "#contact" ).prop( "disabled", false);
-			// alert("else");
+			
 			}			 
 	
 	});
 	$("#contact").blur(function()
 	{	
-	   //var imgname=$("#photo").val();
-	   
-		//alert(imgname);
-	
 	
 		var contact_pattern = $('#contact').val();
 	   if(!contact_regex.test(contact_pattern))
@@ -136,19 +129,9 @@ $(document).ready(function(){
 	
 	$("#check").click(function()
 	{
-<<<<<<< HEAD
-<<<<<<< HEAD
-	    
-			if($('#check').is(':checked'))
-			{  	alert("chekin");
-=======
-	      //alert("chekin");
-=======
-	      
->>>>>>> b5794c9fc753be100c8851baa1df45c926d77907
+	     // alert("chekin");
 			if($('#check').is(':checked'))
 			{  //	alert("chekin");
->>>>>>> origin/gh-pages
 				$("#btn_submit").prop( "disabled", false);
 			}
 			else
@@ -172,7 +155,7 @@ $(document).ready(function(){
 			$( "#lastname" ).prop( "disabled", false );
 		
 		}
-		
+		//alert("hello2");
 	});
 	
 	
@@ -194,7 +177,7 @@ $(document).ready(function(){
 	
 	});
 		$("#email").blur(function()
-	{		
+	{			
 		 email_pattern = $('#email').val();
 		if(!email_regex.test(email_pattern))
 		{
@@ -211,7 +194,7 @@ $(document).ready(function(){
 	});
 	$("#confirmemail").blur(function()
 	{
-
+		
 		var email_pattern1 = $('#confirmemail').val();
 		if( email_pattern==email_pattern1)
 		{
@@ -232,7 +215,7 @@ $(document).ready(function(){
 	$("#zipcode").blur(function()
 	{  
      	var zipcode_pattern = $('#zipcode').val();
-		//if(isNaN(zipcode_pattern)||zipcode_pattern=="")
+		
 		if(!zipcode_regex.test(zipcode_pattern))
 		{
 		
@@ -257,11 +240,7 @@ $(document).ready(function(){
 		if(!password_regex.test(password_pattern))
 		{
 			$("#password").focus();
-<<<<<<< HEAD
-			$('#7').text("* Invalid password!Should have atleast one Capital letter and numeric *");
-=======
 			$('#7').text("* This is not the valid password! *");
->>>>>>> origin/gh-pages
 			$("#confirmpassword").prop( "disabled", true);
 			//return false;
 		}
@@ -271,13 +250,8 @@ $(document).ready(function(){
 			$("#confirmpassword").prop( "disabled", false);
 		}
 	});
-<<<<<<< HEAD
 	$("#confirmpassword").blur(function(){
-		var password_pattern2 = $('#confirmpassword').val();
-=======
-	$("confirmpassword").blur(function(){
 		var password_pattern2 = $('#password').val();
->>>>>>> origin/gh-pages
 		if(password_pattern==password_pattern2)
 		{
 			$('#8').text("");
@@ -285,11 +259,7 @@ $(document).ready(function(){
 		}
 		else
 		{
-<<<<<<< HEAD
-			$("#confirmpassword").focus(); 
-=======
 			$("#password").focus(); 
->>>>>>> origin/gh-pages
 			$('#8').text("* enter same password as above *");
 			$("#check2").prop( "disabled", true);
 		}
@@ -299,22 +269,15 @@ $(document).ready(function(){
 	
 	$("#check2").click(function()
 	{
-<<<<<<< HEAD
-	      //alert("chekin");
+	      
 			if($('#check2').is(':checked'))
-			{  	//alert("chekin");
-=======
-	      alert("chekin");
-			if($('#check2').is(':checked'))
-			{  	alert("chekin");
->>>>>>> origin/gh-pages
+			{  	
 				$("#btn_submit1").prop( "disabled", false);
 			}
 			else
 			    $("#btn_submit1").prop( "disabled", true);
 	
 	});
-	
 	
 	
 	
