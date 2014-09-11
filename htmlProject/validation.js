@@ -136,9 +136,15 @@ $(document).ready(function(){
 	
 	$("#check").click(function()
 	{
+<<<<<<< HEAD
 	    //  alert("chekin");
 			if($('#check').is(':checked'))
 			{  	alert("chekin");
+=======
+	      //alert("chekin");
+			if($('#check').is(':checked'))
+			{  //	alert("chekin");
+>>>>>>> origin/gh-pages
 				$("#btn_submit").prop( "disabled", false);
 			}
 			else
@@ -247,7 +253,11 @@ $(document).ready(function(){
 		if(!password_regex.test(password_pattern))
 		{
 			$("#password").focus();
+<<<<<<< HEAD
 			$('#7').text("* Invalid password!Should have atleast one Capital letter and numeric *");
+=======
+			$('#7').text("* This is not the valid password! *");
+>>>>>>> origin/gh-pages
 			$("#confirmpassword").prop( "disabled", true);
 			//return false;
 		}
@@ -257,8 +267,13 @@ $(document).ready(function(){
 			$("#confirmpassword").prop( "disabled", false);
 		}
 	});
+<<<<<<< HEAD
 	$("#confirmpassword").blur(function(){
 		var password_pattern2 = $('#confirmpassword').val();
+=======
+	$("confirmpassword").blur(function(){
+		var password_pattern2 = $('#password').val();
+>>>>>>> origin/gh-pages
 		if(password_pattern==password_pattern2)
 		{
 			$('#8').text("");
@@ -266,7 +281,11 @@ $(document).ready(function(){
 		}
 		else
 		{
+<<<<<<< HEAD
 			$("#confirmpassword").focus(); 
+=======
+			$("#password").focus(); 
+>>>>>>> origin/gh-pages
 			$('#8').text("* enter same password as above *");
 			$("#check2").prop( "disabled", true);
 		}
@@ -276,9 +295,15 @@ $(document).ready(function(){
 	
 	$("#check2").click(function()
 	{
+<<<<<<< HEAD
 	      //alert("chekin");
 			if($('#check2').is(':checked'))
 			{  	//alert("chekin");
+=======
+	      alert("chekin");
+			if($('#check2').is(':checked'))
+			{  	alert("chekin");
+>>>>>>> origin/gh-pages
 				$("#btn_submit1").prop( "disabled", false);
 			}
 			else
