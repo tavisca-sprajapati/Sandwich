@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
    <head>
@@ -12,8 +11,10 @@
 	<link href="main.css" rel="stylesheet">
      <link rel="icon" href="favicon.ico" type="image/x-icon">
      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	  <script src="passenger.js"></script>
+	 <!-- <script src="passenger.js"></script> -->
     <script src="headervalidation.js"></script>
+	  <script src="validation.js"></script>
+
 
 	
    </head>
@@ -101,7 +102,7 @@
           <br/>
             
           
-		  <form name="PassengerDetailsForm" action="confirmation.html" onSubmit="return validateForm(this)" method="post">
+		  <form name="PassengerDetailsForm" action="confirmation.html"  method="post">
             <div class="cust_detail" >
                         
                     
@@ -110,20 +111,20 @@
                     <div>
                     <div class="col-md-4 col-sm-6 col-xs-12">
                       <div class="firstname">*First Name</div>
-                      <div><input type="text" id="firstname" onblur="return validateForm()"> </div>
+                      <div><input type="text" id="firstname" onblur="return validateForm()" > </div>
                       <div id="1" class="validation"></div>
                     </div>
                     
 
                     <div class="col-md-4 col-sm-6 col-xs-12">
                       <div class="firstname">*Last Name</div>
-                      <div><input type="text" id="lastname" onblur="return validateForm()"> </div>
+                      <div><input type="text" id="lastname" onblur="return validateForm()" disabled> </div>
                       <div id="2" class="validation"></div>
                     </div>
                     
 
                     <div class="col-md-4 col-sm-6 col-xs-12">
-                      <div class="firstname">*M.I.</div>
+                      <div class="firstname">M.I.</div>
                       <div>
                       <select id="mi" onblur="return validateForm()">
                           <option>Please Select</option>
@@ -140,7 +141,7 @@
                       <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="firstname">*Email Address</div>
                         <center>
-                          <div><input type="text" id="email" style="width:100%" onblur="return validateForm()"> </div>
+                          <div><input type="text" id="email" style="width:100%" onblur="return validateForm()"disabled> </div>
                           <div id="4" class="validation" ></div>
                         </center>
                       </div>
@@ -148,7 +149,7 @@
                       <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="firstname">*Confirm Email Address</div>
                         <center>
-                          <div><input type="text" id="confirmemail" style="width:100%" onblur="return validateForm()"> </div>
+                          <div><input type="text" id="confirmemail" style="width:100%" onblur="return validateForm()"disabled> </div>
                           <div id="5" class="validation"></div>
                         </center>
                       </div>
@@ -156,7 +157,7 @@
                     <div>
                       <div class="col-md-12 col-sm-12 col-xs-12">
                          <div class="firstname">*Zip Code</div>
-                         <div><input type="text" id="zipcode"> </div>
+                         <div><input type="text" id="zipcode" disabled> </div>
                          <div id="6" class="validation"></div>
                       </div>
                     </div>
@@ -168,14 +169,14 @@
                       <div>
                         <div class="col-md-4 col-sm-6 col-xs-12">
                           <div class="firstname">*Password</div>
-                          <div><input type="password" id="password" onblur="return validateForm()"> </div>
+                          <div><input type="password" id="password" onblur="return validateForm()" disabled> </div>
                           <div id="7" class="validation"></div>
                         </div>
                       </div>
                   <div>
                     <div class="col-md-12 col-sm-12 col-xs-12">
                       <div class="firstname">*Confirm Password</div>
-                      <div><input type="password" id="confirmpassword" onblur="return validateForm()"> </div>
+                      <div><input type="password" id="confirmpassword" onblur="return validateForm()" disabled> </div>
                       <div id="8" class="validation"></div>
                     </div>
                   </div>
@@ -199,7 +200,7 @@
 
                   <div>
                     <div class="col-md-12 col-sm-12 col-xs-12">
-                      <div class="firstname"><center><input type="checkbox">I agree to Coupotia's <a href="#" traget="_blank" class="col">Terms of Use</a> and <a href="#" traget="_blank" class="col">Privacy Policy</a></center></div>
+                      <div class="firstname"><center><input type="checkbox" id="check2" disabled>I agree to Coupotia's <a href="#" traget="_blank" class="col">Terms of Use</a> and <a href="#" traget="_blank" class="col">Privacy Policy</a></center></div>
                     </div>
                   </div>
 
@@ -208,7 +209,9 @@
                       <div class="firstname"><a href="#" target="_blank" class="col">Back to Login</a> </div>
                     
                   <div >
-                  <input type="submit"/>
+				  					
+					<input type="submit" id="btn_submit1" value="Submit" disabled />
+                  
                   </div>
                   </div>
 

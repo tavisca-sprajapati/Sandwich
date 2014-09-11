@@ -1,5 +1,4 @@
 ﻿
-
 <!DOCTYPE html>
 <html>
    <head>
@@ -14,7 +13,8 @@
   <link href="main.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="dealregistrationvalidation.js"></script>
+ <!-- <script src="dealregistrationvalidation.js"></script> -->
+  <script src="validation.js"></script>
 
 
    </head>
@@ -30,22 +30,13 @@
                      <strong class="text-hello-friend">Hello Friend, you're new here right?</strong>
                      <span class="text-sign-up">Subscribe to our emails and never miss a deal!</span>
                   </div>
-                  <form action="index.html" class="form-email" name="myform" onsubmit="return checkvalidation();" method="post">
+                  <form action="#" class="form-email">
                      <fieldset>
-                      
-                      <div style="width:40%;float:left;">
-                        <input type="text" id="txtEmail" placeholder="Enter Email Address" class="emailInput" tabindex="1" onblur="lemailValidation()"/><div id="email_failed" class="Error"></div>
-                        </div>
-                        <div style="width:25%;float:left;">&nbsp
-                        <input type="text" id="zip" name="zip" placeholder="Enter Zip Code" class="zipInput" tabindex="2" onblur="lzipValidation()"/>
-                       <div id="zip_failed" class="Error"></div>
-                       </div>
-                       <div style="width:8%;float:left;">
-                        <input type="submit" value="." class="btn-sign-up"  tabindex="3"/>
-                    </div>
+                        <input type="text" value="Enter Email Address" class="emailInput" tabindex="1" title="Enter Email Address" onfocus="if(this.value == this.defaultValue) this.value = ''"/>
+                        <input type="text" value="Enter Zip Code" class="zipInput" tabindex="2" title="Enter Zip Code" onfocus="if(this.value == this.defaultValue) this.value = ''"/>
+                        <input type="submit" value="" class="btn-sign-up"  tabindex="3" title="Subscribe"/>
                      </fieldset>
                   </form>
-                  <a href="dealregistration.html">Register Deal</a>
                </div>
             </div>
          </div>
@@ -133,7 +124,7 @@
                     <div>
                       <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="firstname">Add Title</div>
-                      <div><input type="text" style="width:100%;" name="title" id="title" onblur="dealregistrationValidation()"> 
+                      <div><input type="text" style="width:100%;" name="title" id="title" disabled> 
                       </div>
                       
                       <div id="2" class="validation"></div>
@@ -146,7 +137,7 @@
                       <div class="col-md-12 col-sm-12 col-xs-12">
                          <div class="firstname">Description</div>
                          <div><textarea  style="width:100%;" name="description" id="description" 
-                          onblur="dealregistrationValidation()"></textarea></div>
+                          onblur="dealregistrationValidation()" disabled></textarea></div>
                       </div>
                       <div id="3" class="validation"></div>
                       </div>
@@ -156,7 +147,7 @@
                      <div>
                      <div class="col-md-12 col-sm-12 col-xs-12">
                       <div class="firstname">Photo</div>
-                      <div><input type="file" > </div>
+                      <div><input type="file" id="photo" disabled> </div>
                      </div>
                      </div>
 
@@ -167,7 +158,7 @@
                   <div>
                     <div class="col-md-12 col-sm-12 col-xs-12">
                       <div class="firstname">Contact Name:</div>
-                      <div><input type="text"  style="width:100%;" name="contact" id="contact" onblur="dealregistrationValidation()"> </div>
+                      <div><input type="text"  style="width:100%;" name="contact" id="contact" onblur="dealregistrationValidation()" disabled> </div>
                     </div>
                     <div id="4" class="validation"></div>
                   </div>
@@ -175,7 +166,7 @@
                   <div>
                     <div class="col-md-12 col-sm-12 col-xs-12">
                       <div class="firstname">Email:</div>
-                      <div><input type="text"  style="width:100%;" name="email" id="email" onblur="dealregistrationValidation()"> </div>
+                      <div><input type="email"  style="width:100%;" name="email" id="mail" onblur="dealregistrationValidation()" disabled> </div>
                     </div>
                     <div id="5" class="validation"></div>
                   </div>
@@ -183,7 +174,7 @@
                   <div>
                     <div class="col-md-12 col-sm-12 col-xs-12">
                       <div class="firstname">Phone:</div>
-                      <div><input type="text"  style="width:100%;" name="phone" id="phone" onblur="dealregistrationValidation()"></div>
+                      <div><input type="text"  style="width:100%;" name="phone" id="phone" onblur="dealregistrationValidation()" disabled></div>
                     </div>
                     <div id="6" class="validation"></div>
                   </div>
@@ -209,14 +200,15 @@
 
                   <div>
                     <div class="col-md-12 col-sm-12 col-xs-12">
-                      <div class="firstname"><center><input type="checkbox">I agree to Coupotia's <a href="#" traget="_blank" class="col">Terms of Use</a> and <a href="#" traget="_blank" class="col">Privacy Policy</a></center></div>
+                      <div class="firstname"><center><input type="checkbox" id="check" disabled>I agree to Coupotia's <a href="#" traget="_blank" class="col">Terms of Use</a> and <a href="#" traget="_blank" class="col">Privacy Policy</a></center></div>
                     </div>
                   </div>
 
                  
                   
                   <div >
-                    <input type="submit" style=""/>
+					<input type="submit" id="btn_submit" value="Submit" disabled />
+
                   </div>
 
                 </form>
@@ -231,12 +223,13 @@
 
 
 <!--end of body-->
-<div style="padding:1% 1% 1% 1%">
+<div>
 
      <div class="row">
+     </br>
       <div class="col-md-15 col-sm-3">
                         
-                           <ul class="footer-new-deal-ul">
+                           <ul style="list-style-type: none;">
                               <li><h4><p class="footer-side">New Deal</p></h4></li>
                               <li class="internal-li">
                         Microdermabrasion &amp; Facial Options with Jenn Bernier (Up to 65% Off)</li>
@@ -248,7 +241,7 @@
       </div>
 
        <div class="col-md-15 col-sm-3">
-            <ul class="footer-new-deal-ul">
+            <ul style="list-style-type: none;">
                               <li><h4><p class="footer-side">More Deal</p></h4></li>
                               <li class="internal-li">
                         $10 for $20 Worth of Food at DRAE - A Tapas Experience - in Derry</li>
@@ -281,7 +274,7 @@
       </div>
        <div class="col-md-15 col-sm-3">
          
-            <ul class="footer-new-deal-ul">
+            <ul style="list-style-type: none;">
                               <li><h4><p class="footer-side">Past Deals</p></h4></li>
                               <li class="internal-li">
                         Auto Inspection or Air Conditioning Service (Up to 56% Off)</li>
@@ -292,7 +285,7 @@
       </div>
        <div class="col-md-15 col-sm-3">
             
-             <ul class="footer-new-deal-ul">
+             <ul style="list-style-type: none;">
                               <li><h4><p class="footer-side">How It Works</p></h4></li>
                               <li class="internal-li">
                         Free to join Couptopia. Receive emails in your inbox with new deals. Purchase and receive an easy to use redeemable voucher. Consumers and merchants win!</li>
@@ -309,7 +302,7 @@
             <ul class="contact-footer">
                               <li><span class="logo-best-daily"><a href="#">best logo</a></span></li>
                               <li class="internal-li">
-                                    Couptopia, Inc. Â© 2014</br>
+                                    Couptopia, Inc. Ã‚Â© 2014</br>
                                     P.O. Box 3485</br>
                                     Manchester, NH 03105-3485</br>
                                     603-587-0254</br>
