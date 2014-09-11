@@ -240,7 +240,7 @@ $(document).ready(function(){
 		if(!password_regex.test(password_pattern))
 		{
 			$("#password").focus();
-			$('#7').text("* This is not the valid password! *");
+			$('#7').text("* Invalid password!Atleast one capital letter and numeric *");
 			$("#confirmpassword").prop( "disabled", true);
 			//return false;
 		}
