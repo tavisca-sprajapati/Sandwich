@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  $("#lab").draggable({ axis:"y" });
+  $("#lab").draggable({ axis:"y",containment:"#master-wrapper" });
 
   $("#showMe").click(function(){
 
